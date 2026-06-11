@@ -158,9 +158,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--text
   background:linear-gradient(90deg,transparent,var(--gold),var(--lightblue),var(--gold),transparent);
 }
 .meet-ground{position:absolute;left:0;right:0;bottom:54px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.35),transparent)}
-.meet-figure{position:absolute;bottom:54px;width:90px;height:170px;opacity:0}
-.meet-groom{left:6%}
-.meet-bride{right:6%}
+.meet-figure{position:absolute;bottom:54px;width:min(90px,22vw);height:auto;aspect-ratio:90/170;opacity:0;z-index:2}
+.meet-groom{left:8%}
+.meet-bride{right:8%}
+@media (max-width:480px){
+  .meet-stage{height:260px}
+  .meet-figure{width:min(70px,24vw);bottom:46px}
+  .meet-ground{bottom:46px}
+  .meet-bouquet{bottom:84px;font-size:1.3rem}
+}
 .meet-stage.go .meet-groom{animation:walkIn-g 2.6s cubic-bezier(.65,0,.35,1) forwards}
 .meet-stage.go .meet-bride{animation:walkIn-b 2.6s cubic-bezier(.65,0,.35,1) forwards}
 @keyframes walkIn-g{
